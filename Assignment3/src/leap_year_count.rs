@@ -1,3 +1,5 @@
+///This Function counts the number of leap years
+///from the given array of tuples
 pub fn leap_year_counter(arr:&[(usize,usize,usize)],index:usize,mut count:usize)
 {
     let len  = arr.len();

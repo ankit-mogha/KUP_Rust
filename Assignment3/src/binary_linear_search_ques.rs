@@ -24,7 +24,7 @@ pub fn binary_search(arr:&[usize],first:usize,last:usize,num:usize)
         if arr[mid] == num
         {
             println!("Binary Search Result");
-            println!("Number {} is found at {}",num,mid)
+            println!("Number {} is found at {}",num,mid);
         }
         if arr[mid] > num{
             let mid = mid-1;

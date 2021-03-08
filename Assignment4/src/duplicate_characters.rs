@@ -1,6 +1,14 @@
-///This Function tells the repetitive characters in string
+/// This Function tells the repetitive characters in string
+///
+/// #Arguments
+///
+/// this function takes a string as an input
+///
+/// #Return
+///
+/// this function return a string
 
-pub fn find_rep_char(str: &str) -> String{
+pub fn find_rep_char(str: &str) -> String {
     let mut my_str: Vec<char> = str.chars().collect();
     let mut counter = 0;
     let mut result = String::new();
@@ -20,7 +28,7 @@ pub fn find_rep_char(str: &str) -> String{
         }
         counter += 1;
     }
-    return result
+    return result;
 }
 
 /*pub fn find_rep_char(str: &str, i: usize, j: usize) {
@@ -48,18 +56,17 @@ mod tests {
     use super::*;
 
     #[test]
-    fn check_func() {
+    fn check_string_with_two_rep_char() {
         assert_eq!(find_rep_char("Hello World"), "lo");
     }
 
     #[test]
-    fn check_func_1() {
+    fn check_string_with_single_rep_char() {
         assert_eq!(find_rep_char("Hello"), "l");
     }
-    /// Test case when no character is repetitive
+
     #[test]
-    fn check_func_2() {
+    fn negative_test_case() {
         assert_eq!(find_rep_char("ankit"), "");
     }
 }
-

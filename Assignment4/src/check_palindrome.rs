@@ -1,4 +1,12 @@
 ///This function checks if the string is palindrome or not
+///
+/// #Arguments
+///
+/// this function takes a string as an input
+///
+/// #Return
+///
+/// this function return a string
 
 pub fn check_palindrome(input: &str) -> String {
     let mut rev_input = String::new();
@@ -8,12 +16,9 @@ pub fn check_palindrome(input: &str) -> String {
         rev_input.push(char);
     }
 
-    if input.eq(&rev_input)==true
-    {
+    if input.eq(&rev_input) == true {
         result.push_str("Palindrome");
-    }
-    else
-    {
+    } else {
         result.push_str("Not Palindrome");
     }
     result
@@ -22,22 +27,18 @@ pub fn check_palindrome(input: &str) -> String {
 #[cfg(test)]
 mod tests {
     use super::*;
-
-    ///Test Case for palindrome string
     #[test]
     fn check_input_string() {
         assert_eq!(check_palindrome("abba"), "Palindrome");
     }
 
-    ///Single character is palindrome string
     #[test]
-    fn check_input_1() {
+    fn check_a_single_char() {
         assert_eq!(check_palindrome("a"), "Palindrome");
     }
 
-    ///Test Case for non palindrome string
     #[test]
-    fn check_input_2() {
+    fn negative_test_case() {
         assert_eq!(check_palindrome("abbc"), "Not Palindrome");
     }
 }

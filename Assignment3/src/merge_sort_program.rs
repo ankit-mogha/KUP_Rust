@@ -9,47 +9,47 @@ pub fn sort(arr:&mut [usize],first:usize,last:usize){
 }
 
 fn merge(arr:&mut [usize],first:usize,mid:usize,last:usize) {
-  let n1 = mid - first + 1;
-  let n2 = last - mid;
+  let left_num = mid - first + 1;
+  let right_num = last - mid;
   
-  let mut l:[usize;6]=[0;6];
-  let mut r:[usize;6]=[0;6];
+  let mut left:[usize;6]=[0;6];
+  let mut right:[usize;6]=[0;6];
   let mut index =0;
   let mut ind=0;
   let mut i = 0;
   let mut j = 0;
 
-    while index < n1 {
-      l[index] = arr[first + index];
+    while index < left_num {
+      left[index] = arr[first + index];
       index += 1;
   }
   
-  while ind < n2 {
-    r[ind] = arr[mid +1 + ind];
+  while ind < right_num {
+    right[ind] = arr[mid +1 + ind];
     ind += 1;  
   }
   
   let mut k = first;
-  while i < n1 && j < n2 {
-      if l[i] <= r[j] {
-                arr[k] = l[i];
+  while i < left_num && j < right_num {
+      if left[i] <= right[j] {
+                arr[k] = left[i];
                 i+=1;
             }
       else {
-                arr[k] = r[j];
+                arr[k] = right[j];
                 j+=1;
             }
       k+=1;
   }
   
-  while i < n1 {
-            arr[k] = l[i];
+  while i < left_num {
+            arr[k] = left[i];
             i+=1;
             k+=1;
          }
    
-   while j < n2 {
-            arr[k] = r[j];
+   while j < right_num {
+            arr[k] = right[j];
             j+=1;
             k+=1;
         }

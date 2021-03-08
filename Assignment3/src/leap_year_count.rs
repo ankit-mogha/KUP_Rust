@@ -1,5 +1,12 @@
 ///This Function counts the number of leap years
-///from the given array of tuples
+///#Arguments
+///
+/// Array of date tuple, index as a loop variable, counter variable that store number of leap year
+///
+/// #Return
+///
+/// prints the number of leap year
+
 pub fn leap_year_counter(arr:&[(usize,usize,usize)],index:usize,mut count:usize)
 {
     let len  = arr.len();

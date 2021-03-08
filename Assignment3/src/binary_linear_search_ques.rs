@@ -1,5 +1,12 @@
-
-///Linear Search Function
+/// This function Linear search element from the array of numbers.
+///
+/// #Arguments
+///
+/// Array of numbers, number that need to be searched in array , index as a loop variable
+///
+/// #Return
+///
+/// prints the index at which number is found
 pub fn linear_search(arr:&[usize],num:usize,index:usize)
 {
     let len = arr.len();
@@ -14,8 +21,15 @@ pub fn linear_search(arr:&[usize],num:usize,index:usize)
         linear_search(arr,num,index);
     }
 }
-
-///Binary Search Function
+/// This function Binary search element from the array of numbers.
+///
+/// #Arguments
+///
+/// Sorted array of numbers, number that need to be searched in array , first element of array , last elements of array
+///
+/// #Return
+///
+/// prints the index at which number is found
 pub fn binary_search(arr:&[usize],first:usize,last:usize,num:usize)
 {
     if last>=first

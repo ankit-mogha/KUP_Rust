@@ -14,14 +14,14 @@ fn main() {
     binary_linear_search_ques::binary_search(&arr,first,last,num);
     println!(" ");
 
-    ///Taking Array of tuples as input in (dd,mm,year)
+
     let date = [(01,02,2020),(03,04,2021),(13,09,2024)];
     let index=0;
     let count=0;
     println!(" ");
     leap_year_count::leap_year_counter(&date,index,count);
 
-    ///defining a new array for merge sort
+
     let mut array = [12, 11, 13, 5, 6, 7];
     println!(" ");
     println!("Merge Sort");

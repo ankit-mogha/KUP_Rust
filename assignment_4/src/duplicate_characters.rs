@@ -1,12 +1,12 @@
-/// This Function tells the repetitive characters in string
+/// find_rep_char function tells the repetitive characters in string
 ///
 /// #Arguments
 ///
-/// this function takes a string as an input
+/// str(&str) : string  
 ///
 /// #Return
 ///
-/// this function return a string
+/// function return a string
 
 pub fn find_rep_char(str: &str) -> String {
     let mut my_str: Vec<char> = str.chars().collect();

@@ -1,8 +1,9 @@
-///This function checks if strings are rotations of each other
+/// check_str_rev function checks if strings are rotations of each other
 ///
 /// #Arguments
 ///
-/// this function takes two strings as an input
+/// input : First String
+/// input2 : Second String
 ///
 /// #Return
 ///

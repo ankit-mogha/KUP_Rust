@@ -21,7 +21,6 @@ pub mod tests {
         assert_eq!(sub_string_find("a"), ['a']);
     }
 
-
     #[test]
     fn check_main_fn() {
         use crate::main_fn;

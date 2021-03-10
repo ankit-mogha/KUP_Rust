@@ -1,12 +1,12 @@
-///This function checks if the string is palindrome or not
+///check_palindrome function checks if the string is palindrome or not
 ///
 /// #Arguments
 ///
-/// this function takes a string as an input
+/// function takes a string as an input
 ///
 /// #Return
 ///
-/// this function return a string
+/// function return a string
 
 pub fn check_palindrome(input: &str) -> String {
     let mut rev_input = String::new();

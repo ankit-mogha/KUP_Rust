@@ -22,6 +22,12 @@ pub mod tests {
     }
 
     #[test]
+    fn check_desired_output_string() {
+        use crate::ques2::desired_output::desired_output_fn;
+        assert_eq!(desired_output_fn("Ankit", "Mogha", "AnkitMogha"), "Aogia");
+    }
+
+    #[test]
     fn check_main_fn() {
         use crate::main_fn;
         assert!(main_fn());

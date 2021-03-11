@@ -8,6 +8,7 @@
 /// #Return
 ///
 /// Returns index(usize) of the starting point of pattern
+
 pub fn pattern_check(string: &str, pattern: &str) -> usize {
     let len_pattern = pattern.len();
     let len_string = string.len();

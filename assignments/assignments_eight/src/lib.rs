@@ -1,9 +1,11 @@
-mod odd_even;
 mod test;
 
+pub mod even_odd {
+    pub mod odd_even;
+}
+
 pub fn main_fn() -> bool {
-    let num = 10;
-    odd_even::check_num(num);
+    even_odd::odd_even::check_num(10);
 
     true
 }

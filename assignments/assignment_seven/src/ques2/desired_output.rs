@@ -2,9 +2,9 @@
 ///
 /// #Arguments
 ///
-/// first_str - String type argument.
-/// second_str - String type argument.
-/// third_str - String type argument.
+/// first_str : str type argument.
+/// second_str : str type argument.
+/// third_str : str type argument.
 ///
 /// #Return
 ///

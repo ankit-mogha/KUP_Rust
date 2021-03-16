@@ -17,7 +17,7 @@ pub fn reverse(mut vec: Vec<i32>) -> Vec<i32> {
                 res.push(*ele);
                 vec.pop();
             }
-            None => println!("no"),
+            None => log::info!("empty"),
         }
         len -= 1;
     }

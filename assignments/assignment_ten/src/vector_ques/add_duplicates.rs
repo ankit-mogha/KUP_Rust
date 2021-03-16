@@ -8,8 +8,7 @@
 ///
 /// Returns list of vector type having duplicate values.
 pub fn duplicate(vec: Vec<i32>) -> Vec<i32> {
-    let mut res: Vec<i32> = Vec::new();
-    println!("{}", vec.len());
+    let mut res: Vec<i32> = Vec::new()
     for index in vec {
         res.push(index);
         res.push(index);

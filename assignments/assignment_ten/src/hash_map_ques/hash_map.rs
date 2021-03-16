@@ -22,11 +22,8 @@ pub fn sum_conditional(map: &HashMap<String, i32>, str: String) -> i32 {
     while counter < key_set.len() {
         if key_set[counter].contains(&str.to_string()) {
             let age = map.get(&key_set[counter]);
-            match age {
-                Some(age) => {
-                    sum_age += age;
-                }
-                None => println!("Not found"),
+            if let Some(age) = age {
+                sum_age += age;
             }
         }
         counter += 1;

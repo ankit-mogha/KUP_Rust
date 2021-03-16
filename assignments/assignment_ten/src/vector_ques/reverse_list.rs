@@ -12,12 +12,9 @@ pub fn reverse(mut vec: Vec<i32>) -> Vec<i32> {
     let mut len = vec.len();
     while len > 0 {
         let last = vec.last();
-        match last {
-            Some(ele) => {
-                res.push(*ele);
-                vec.pop();
-            }
-            None => log::info!("empty"),
+        if let Some(ele) = last {
+            res.push(*ele);
+            vec.pop();
         }
         len -= 1;
     }

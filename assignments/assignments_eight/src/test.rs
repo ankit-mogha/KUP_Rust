@@ -1,20 +1,15 @@
 pub mod tests {
-
     #[test]
     fn check_even_num() {
-        use crate::even_odd::odd_even::check_num;
-        assert_eq!(check_num(10), "Even");
+        use crate::odd_even_ques::odd_even_checker::check_output;
+        let num = 10;
+        assert_eq!(check_output(num), "Even");
     }
 
     #[test]
     fn check_odd_num() {
-        use crate::even_odd::odd_even::check_num;
-        assert_eq!(check_num(13), "Odd");
-    }
-
-    #[test]
-    fn check_main_fn() {
-        use crate::main_fn;
-        assert!(main_fn());
+        use crate::odd_even_ques::odd_even_checker::check_output;
+        let num = 13;
+        assert_eq!(check_output(num), "Odd");
     }
 }

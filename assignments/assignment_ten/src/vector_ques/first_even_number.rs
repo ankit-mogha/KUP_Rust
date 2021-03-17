@@ -6,7 +6,7 @@
 ///
 /// #Return
 ///
-/// Returns i32 that is first even number in list.
+/// Returns first even number in list.
 
 pub fn first_even(vec: Vec<i32>) -> i32 {
     let mut count = 0;

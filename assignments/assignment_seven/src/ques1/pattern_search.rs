@@ -3,7 +3,7 @@
 /// #Arguments
 ///
 /// string : given string from which pattern need to be searched.
-/// pattern : patter that need to be searched from given string.
+/// pattern : pattern that need to be searched from given string.
 ///
 /// #Return
 ///

@@ -6,7 +6,7 @@
 ///
 /// #Return
 ///
-/// Returns list of vector type after reversing them.
+/// Returns list after reversing its elements.
 pub fn reverse(mut vec: Vec<i32>) -> Vec<i32> {
     let mut res: Vec<i32> = Vec::new();
     let mut len = vec.len();

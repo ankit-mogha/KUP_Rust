@@ -3,12 +3,11 @@
 /// #Arguments
 ///
 /// string : given string from which pattern need to be searched.
-/// pattern : pattern that need to be searched from given string.
+/// pattern : patter that need to be searched from given string.
 ///
 /// #Return
 ///
 /// Returns index(usize) of the starting point of pattern
-
 pub fn pattern_check(string: &str, pattern: &str) -> usize {
     let len_pattern = pattern.len();
     let len_string = string.len();

@@ -9,7 +9,6 @@
 /// #Return
 ///
 /// Returns a String.
-
 pub fn desired_output_fn(first_str: &str, second_str: &str, third_str: &str) -> String {
     let mut count = 0;
     let mut index: usize = 0;

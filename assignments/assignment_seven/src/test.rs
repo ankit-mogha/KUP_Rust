@@ -1,6 +1,6 @@
 pub mod tests {
     #[test]
-    fn check_position() {
+    fn substring_position_found() {
         use crate::ques1::pattern_search::pattern_check;
         let string = "Ankit Mogha";
         let pattern = "Mog";
@@ -8,7 +8,7 @@ pub mod tests {
     }
 
     #[test]
-    fn check_position_not_found() {
+    fn substring_position_not_found() {
         use crate::ques1::pattern_search::pattern_check;
         let string = "Ankit Mogha";
         let pattern = "Abc";
@@ -16,20 +16,14 @@ pub mod tests {
     }
 
     #[test]
-    fn check_sub() {
+    fn check_substring() {
         use crate::ques1::substring_generate::sub_string_find;
-        assert_eq!(sub_string_find("a"), ['a']);
+        assert_eq!(sub_string_find("pa"), ["p", "pa", "a"]);
     }
 
     #[test]
     fn check_desired_output_string() {
         use crate::ques2::desired_output::desired_output_fn;
         assert_eq!(desired_output_fn("Ankit", "Mogha", "AnkitMogha"), "Aogia");
-    }
-
-    #[test]
-    fn check_main_fn() {
-        use crate::main_fn;
-        assert!(main_fn());
     }
 }

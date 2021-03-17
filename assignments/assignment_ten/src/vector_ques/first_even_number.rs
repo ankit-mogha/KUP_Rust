@@ -2,7 +2,7 @@
 ///
 /// #Arguments
 ///
-/// vec : its a Hashmap have key as string type and values as i32 type.
+/// vec : its a list of numbers.
 ///
 /// #Return
 ///

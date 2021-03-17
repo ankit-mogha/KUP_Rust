@@ -1,8 +1,12 @@
 mod tests {
+
     #[test]
+
     fn first_repeat_finder_success() {
+        env_logger::init();
         use crate::list_ques::first_repeated_num::first_repeated;
         use crate::list_ques::first_repeated_num::List::{Cons, Nil};
+        log::info!("finds first repeated number");
         let test_list = Cons(
             1,
             Box::new(Cons(
@@ -16,9 +20,10 @@ mod tests {
         assert_eq!(first_repeated(0, test_list), 21);
     }
     #[test]
-    fn second_repeat_finder_success() {
+    fn second_repeat_finder_success(){
         use crate::list_ques::second_repeated_num::second_repeated;
         use crate::list_ques::second_repeated_num::List::{Cons, Nil};
+        log::info!("finds Second repeated number");
         let test_list = Cons(
             1,
             Box::new(Cons(
@@ -35,6 +40,7 @@ mod tests {
     fn find_number() {
         use crate::list_ques::find_nth_element::nth_number_finder;
         use crate::list_ques::find_nth_element::List::{Cons, Nil};
+        log::info!("finds nth number");
         let test_list = Cons(
             1,
             Box::new(Cons(
@@ -51,6 +57,7 @@ mod tests {
     fn find_odd_number() {
         use crate::list_ques::third_odd_number::third_odd;
         use crate::list_ques::third_odd_number::List::{Cons, Nil};
+        log::info!("finds third odd number");
         let test_list = Cons(
             1,
             Box::new(Cons(

@@ -109,12 +109,6 @@ impl Book {
             log::error!("Book already in library");
             result.push_str("Book already in library");
         } else {
-            /*Book {
-                self.accession_number,
-                name_of_author: String::from(&self.name_of_author),
-                book_title: String::from(&self.book_title),
-                flag: self.flag + 1,
-            };*/
             {
                 String::from(&self.name_of_author);
                 String::from(&self.book_title);
@@ -142,7 +136,6 @@ impl Book {
         match self.flag {
             1 => {
                 self.flag -= 1;
-                //number_flag.insert(self.accession_number,self.flag);
                 log::debug!("Book issued");
                 result.push_str("Book issued");
             }
@@ -170,7 +163,6 @@ impl Book {
         count: &mut i8,
     ) -> Option<i8> {
         let mut books_set: Vec<String> = Vec::new();
-        //let mut result = Vec::new();
         for books_names in books.values() {
             books_set.push(books_names.to_string());
         }
@@ -182,8 +174,6 @@ impl Book {
             index += 1;
         }
         log::debug!("Number of books of title {:?} is {}", &title, count);
-        //result.push(*count);
-        //result
         if *count == 0 {
             None
         }

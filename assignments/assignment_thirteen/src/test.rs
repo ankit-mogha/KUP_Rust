@@ -32,7 +32,7 @@ mod tests {
         };
 
         let list_of_books = vec![book1.accession_number, book2.accession_number];
-        assert_eq!(book1.total_number_of_books(&list_of_books), 2);
+        assert_eq!(book1.total_number_of_books(&list_of_books), Some(2));
     }
 
     #[test]
@@ -232,7 +232,7 @@ mod tests {
                 &map_books_authors,
                 &mut count
             ),
-            [2]
+            Some(2)
         );
     }
 
@@ -271,7 +271,7 @@ mod tests {
                 &map_books_authors,
                 &mut count
             ),
-            [0]
+            None
         );
     }
 }

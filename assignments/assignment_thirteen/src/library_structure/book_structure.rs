@@ -45,9 +45,15 @@ impl Book {
     /// #Return
     ///
     /// Returns Number of books present in library.
-    pub fn total_number_of_books(&self, no_books: &[i32]) -> usize {
+    pub fn total_number_of_books(&self, no_books: &[i32]) -> Option<usize> {
         log::debug!("Total number of books : {}", no_books.len());
-        no_books.len()
+        let length = no_books.len();
+        if length == 0 {
+            None
+        }
+        else {
+            Some(length)
+        }
     }
     /// total_number_of_books method displays all books in Books structure.
     ///
@@ -162,9 +168,9 @@ impl Book {
         title: String,
         books: &HashMap<String, String>,
         count: &mut i8,
-    ) -> Vec<i8> {
+    ) -> Option<i8> {
         let mut books_set: Vec<String> = Vec::new();
-        let mut result = Vec::new();
+        //let mut result = Vec::new();
         for books_names in books.values() {
             books_set.push(books_names.to_string());
         }
@@ -176,7 +182,14 @@ impl Book {
             index += 1;
         }
         log::debug!("Number of books of title {:?} is {}", &title, count);
-        result.push(*count);
-        result
+        //result.push(*count);
+        //result
+        if *count == 0 {
+            None
+        }
+        else {
+            Some(*count)
+        }
+
     }
 }

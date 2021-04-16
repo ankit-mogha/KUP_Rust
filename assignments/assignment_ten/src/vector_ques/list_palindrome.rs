@@ -7,7 +7,7 @@
 /// #Return
 ///
 /// Returns ture if list is palindrome else false if list is not palindrome.
-pub fn is_palindrome(vec: Vec<i32>) -> bool {
+pub fn is_palindrome(vec: Vec<i32>) -> Option<bool> {
     let half_len = vec.len() / 2;
     let len = vec.len();
     let mut count = 0;
@@ -19,6 +19,5 @@ pub fn is_palindrome(vec: Vec<i32>) -> bool {
         }
         index += 1;
     }
-    //if count != 1 { true } else { false }
-    count != 1
+    Some(count != 1)
 }

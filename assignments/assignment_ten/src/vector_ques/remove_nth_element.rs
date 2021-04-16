@@ -8,7 +8,7 @@
 ///
 /// Returns list of number of type Vec<i32> after deleting the number.
 
-pub fn drop(mut vec: Vec<i32>, num: i32) -> Vec<i32> {
+pub fn drop(mut vec: Vec<i32>, num: i32) -> Option<Vec<i32>> {
     let mut index = 0;
     while index < vec.len() {
         if num == vec[index] {
@@ -17,5 +17,5 @@ pub fn drop(mut vec: Vec<i32>, num: i32) -> Vec<i32> {
 
         index += 1;
     }
-    vec
+    Some(vec)
 }

@@ -7,12 +7,12 @@
 /// #Return
 ///
 /// Returns list of vector type having duplicate values.
-pub fn duplicate(vec: Vec<i32>) -> Vec<i32> {
+pub fn duplicate(vec: Vec<i32>) -> Option<Vec<i32>> {
     let mut res: Vec<i32> = Vec::new();
     for index in vec {
         res.push(index);
         res.push(index);
     }
     log::info!("List : {:?}", res);
-    res
+    Some(res)
 }

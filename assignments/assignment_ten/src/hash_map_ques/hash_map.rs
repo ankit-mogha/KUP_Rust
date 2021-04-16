@@ -12,7 +12,7 @@ use std::collections::HashMap;
 ///
 /// Returns i32 that tells total of the age of persons have that particular pattern in it.
 
-pub fn sum_conditional(map: &HashMap<String, i32>, str: String) -> i32 {
+pub fn sum_conditional(map: &HashMap<String, i32>, str: String) -> Option<i32> {
     let mut sum_age = 0;
     let mut key_set: Vec<String> = Vec::new();
     for key in map.keys() {
@@ -29,5 +29,5 @@ pub fn sum_conditional(map: &HashMap<String, i32>, str: String) -> i32 {
         counter += 1;
     }
     log::info!("Sum : {}", sum_age);
-    sum_age
+    Some(sum_age)
 }

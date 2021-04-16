@@ -7,7 +7,7 @@
 /// #Return
 ///
 /// Returns a sorted array
-pub fn sort_array<T: PartialOrd + Copy>(arr: &mut [T]) -> &[T] {
+pub fn sort_array<T: PartialOrd + Copy>(arr: &mut [T]) -> Option<&[T]> {
     for index in 0..arr.len() {
         for inner_index in (index + 1)..arr.len() {
             let temp;
@@ -18,5 +18,5 @@ pub fn sort_array<T: PartialOrd + Copy>(arr: &mut [T]) -> &[T] {
             }
         }
     }
-    arr
+    Some(arr)
 }

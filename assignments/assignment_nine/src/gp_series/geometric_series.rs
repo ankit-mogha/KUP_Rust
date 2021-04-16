@@ -1,6 +1,6 @@
 ///CustomIterator trait
 pub trait CustomIterator {
-    fn gp_gen(&mut self) -> Vec<i32>;
+    fn gp_gen(&mut self) -> Option<Vec<i32>>;
 }
 ///GeometricSeries Structure.
 ///
@@ -25,12 +25,12 @@ impl CustomIterator for GeometricSeries {
     /// #Return
     ///
     /// Returns Vector<i32> having geometric series
-    fn gp_gen(&mut self) -> Vec<i32> {
+    fn gp_gen(&mut self) -> Option<Vec<i32>> {
         let mut gp_series: Vec<i32> = Vec::new();
         for i in 0..11 {
             self.current_number = self.first_number * self.ratio.pow(i);
             gp_series.push(self.current_number);
         }
-        gp_series
+        Some(gp_series)
     }
 }

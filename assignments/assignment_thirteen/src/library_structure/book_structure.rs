@@ -50,8 +50,7 @@ impl Book {
         let length = no_books.len();
         if length == 0 {
             None
-        }
-        else {
+        } else {
             Some(length)
         }
     }
@@ -69,7 +68,7 @@ impl Book {
     pub fn display_books_given_author(
         author: String,
         map_books_authors: &HashMap<String, String>,
-    ) -> String {
+    ) -> Option<String> {
         let author_name = author;
         let book_name = map_books_authors.get(&author_name);
         let mut result = String::new();
@@ -83,7 +82,7 @@ impl Book {
                 log::error!("author not found");
             }
         }
-        result
+        Some(result)
     }
     /// add_book method adds a new book to library.
     ///
@@ -103,7 +102,7 @@ impl Book {
         no_books: &mut Vec<i32>,
         map_books_authors: &mut HashMap<String, String>,
         map_number_flag: &mut HashMap<i32, i8>,
-    ) -> String {
+    ) -> Option<String> {
         let mut result = String::new();
         if no_books.contains(&self.accession_number) {
             log::error!("Book already in library");
@@ -119,7 +118,7 @@ impl Book {
             no_books.push(self.accession_number);
             result.push_str("Book Added");
         }
-        result
+        Some(result)
     }
 
     /// issue method issues a books.
@@ -131,7 +130,7 @@ impl Book {
     /// #Return
     ///
     /// Returns a Confirmation message.
-    pub fn issue(&mut self /*number_flag:&mut HashMap<i32,i8>*/) -> String {
+    pub fn issue(&mut self /*number_flag:&mut HashMap<i32,i8>*/) -> Option<String> {
         let mut result = String::new();
         match self.flag {
             1 => {
@@ -144,7 +143,7 @@ impl Book {
                 result.push_str("Book already issued to someone");
             }
         }
-        result
+        Some(result)
     }
     /// add_book method adds a new book to library.
     ///
@@ -176,10 +175,8 @@ impl Book {
         log::debug!("Number of books of title {:?} is {}", &title, count);
         if *count == 0 {
             None
-        }
-        else {
+        } else {
             Some(*count)
         }
-
     }
 }

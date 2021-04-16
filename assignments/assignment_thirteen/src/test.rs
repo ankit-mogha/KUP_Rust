@@ -57,7 +57,7 @@ mod tests {
 
         assert_eq!(
             Book::display_books_given_author("Darcey Bell".to_string(), &map_books_authors),
-            "A Simple Favor"
+            Some("A Simple Favor".to_string())
         );
     }
 
@@ -83,7 +83,7 @@ mod tests {
 
         assert_eq!(
             Book::display_books_given_author("Ankit Mogha".to_string(), &map_books_authors),
-            "author not found"
+            Some("author not found".to_string())
         );
     }
 
@@ -126,7 +126,7 @@ mod tests {
                 &mut map_books_authors,
                 &mut map_number_flag
             ),
-            "Book Added"
+            Some("Book Added".to_string())
         );
     }
 
@@ -169,7 +169,7 @@ mod tests {
                 &mut map_books_authors,
                 &mut map_number_flag
             ),
-            "Book already in library"
+            Some("Book already in library".to_string())
         );
     }
 
@@ -182,7 +182,7 @@ mod tests {
             flag: 1,
         };
 
-        assert_eq!(book1.issue(), "Book issued");
+        assert_eq!(book1.issue(), Some("Book issued".to_string()));
     }
 
     #[test]
@@ -194,7 +194,10 @@ mod tests {
             flag: 1,
         };
         book1.issue();
-        assert_eq!(book1.issue(), "Book already issued to someone");
+        assert_eq!(
+            book1.issue(),
+            Some("Book already issued to someone".to_string())
+        );
     }
 
     #[test]

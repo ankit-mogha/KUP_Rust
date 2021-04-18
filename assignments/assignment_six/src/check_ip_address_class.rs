@@ -7,13 +7,13 @@
 /// ClassB : includes a single String.
 /// ClassC : includes a single String.
 /// ClassD : includes a single String.
-/// Error : includes a single String.
+/// ClassE : includes a single String.
 pub enum Ip {
     ClassA(String),
     ClassB(String),
     ClassC(String),
     ClassD(String),
-    Error(String),
+    ClassE(String),
 }
 /// check_ip_address function checks in which Ip class the following IP address belongs.
 ///
@@ -67,6 +67,6 @@ pub fn check_ip_address(adder: (i32, i32, i32, i32)) -> Ip {
             result.push_str(&d.to_string());
             Ip::ClassD(result)
         }
-        _ => Ip::Error(String::from("Invalid Ip Address")),
+        _ => Ip::ClassE(String::from("")),
     }
 }

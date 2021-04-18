@@ -1,8 +1,9 @@
+#[cfg(test)]
 pub mod tests {
+    use crate::check_coordinates::{check_coordinates_quadrant, Quadrants};
 
     #[test]
     fn check_for_fourth_quadrant() {
-        use crate::check_coordinates::{check_coordinates_quadrant, Quadrants};
         let points: (i32, i32) = (2, -2);
         assert_eq!(
             check_coordinates_quadrant(points),
@@ -15,7 +16,6 @@ pub mod tests {
 
     #[test]
     fn check_for_first_quadrant() {
-        use crate::check_coordinates::{check_coordinates_quadrant, Quadrants};
         let points: (i32, i32) = (2, 2);
         assert_eq!(
             check_coordinates_quadrant(points),
@@ -116,7 +116,7 @@ pub mod tests {
         let add: (i32, i32, i32, i32) = (-1, 0, 1, 1);
         assert_eq!(
             check_ip_address(add),
-            Ip::Error("Invalid Ip Address".to_string())
+            Ip::ClassE("Belong to class E".to_string())
         );
     }
 

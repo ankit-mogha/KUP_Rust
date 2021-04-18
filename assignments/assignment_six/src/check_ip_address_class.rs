@@ -67,6 +67,6 @@ pub fn check_ip_address(adder: (i32, i32, i32, i32)) -> Ip {
             result.push_str(&d.to_string());
             Ip::ClassD(result)
         }
-        _ => Ip::ClassE(String::from("")),
+        _ => Ip::ClassE(String::from("Belong to class E")),
     }
 }

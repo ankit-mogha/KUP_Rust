@@ -23,9 +23,9 @@ use crate::list_ques::third_odd_number::List::{Cons, Nil};
 /// #Return
 ///
 /// Return the third odd number of the given list.
-pub fn third_odd(counter: i32, list: List) -> i32 {
+pub fn third_odd(counter: i32, list: List) -> Option<i32> {
     match list {
-        Nil => -1,
+        Nil => Some(-1),
         Cons(num, list) => {
             let result = num % 2 != 0;
             match result {
@@ -33,7 +33,7 @@ pub fn third_odd(counter: i32, list: List) -> i32 {
                     if counter == 1 || counter == 0 {
                         third_odd(counter + 1, *list)
                     } else {
-                        num
+                        Some(num)
                     }
                 }
                 false => third_odd(counter, *list),

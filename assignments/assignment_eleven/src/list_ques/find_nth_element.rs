@@ -24,12 +24,12 @@ use crate::list_ques::find_nth_element::List::{Cons, Nil};
 /// #Return
 ///
 /// Return the number at the given index.
-pub fn nth_number_finder(index: i32, counter: i32, list: List) -> i32 {
+pub fn nth_number_finder(index: i32, counter: i32, list: List) -> Option<i32> {
     match list {
-        Nil => -1,
+        Nil => Some(-1),
         Cons(number, list) => {
             if index == counter {
-                number
+                Some(number)
             } else {
                 nth_number_finder(index, counter + 1, *list)
             }

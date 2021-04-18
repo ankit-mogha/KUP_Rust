@@ -6,4 +6,3 @@ pub mod list_ques {
     pub mod second_repeated_num;
     pub mod third_odd_number;
 }
-

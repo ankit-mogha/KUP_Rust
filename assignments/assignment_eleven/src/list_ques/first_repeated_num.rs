@@ -22,11 +22,11 @@ use crate::list_ques::first_repeated_num::List::{Cons, Nil};
 /// #Return
 ///
 /// Return the number containing first repeated number of the given list.
-pub fn first_repeated(prev_number: i32, list: List) -> i32 {
+pub fn first_repeated(prev_number: i32, list: List) -> Option<i32> {
     match list {
-        Nil => -1,
+        Nil => Some(-1),
         Cons(current_num, list) => match prev_number == current_num {
-            true => current_num,
+            true => Some(current_num),
             false => first_repeated(current_num, *list),
         },
     }

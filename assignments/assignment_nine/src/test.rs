@@ -1,6 +1,6 @@
 #[cfg(test)]
 pub mod tests {
-    use crate::gp_series::geometric_series::{CustomIterator, GeometricSeries};
+    use crate::gp_series::geometric_series::GeometricSeries;
     use crate::sorting_and_compare::compare_two_value::compare_values;
     use crate::sorting_and_compare::sorting_array::sort_array;
 
@@ -38,7 +38,7 @@ pub mod tests {
             current_number: 0,
         };
         assert_eq!(
-            series.gp_gen(),
+            series.next(),
             Some(vec![
                 2, 6, 18, 54, 162, 486, 1458, 4374, 13122, 39366, 118098
             ])

@@ -1,7 +1,3 @@
-///CustomIterator trait
-pub trait CustomIterator {
-    fn gp_gen(&mut self) -> Option<Vec<i32>>;
-}
 ///GeometricSeries Structure.
 ///
 /// #fields
@@ -15,7 +11,8 @@ pub struct GeometricSeries {
     pub ratio: i32,
 }
 ///Implementing CustomIterator Trait for GeometricSeries Structure
-impl CustomIterator for GeometricSeries {
+impl Iterator for GeometricSeries {
+    type Item = Vec<i32>;
     /// gp_gen function find the geometric series.
     ///
     /// #Arguments
@@ -25,7 +22,7 @@ impl CustomIterator for GeometricSeries {
     /// #Return
     ///
     /// Returns Vector<i32> having geometric series
-    fn gp_gen(&mut self) -> Option<Vec<i32>> {
+    fn next(&mut self) -> Option<Self::Item> {
         let mut gp_series: Vec<i32> = Vec::new();
         for i in 0..11 {
             self.current_number = self.first_number * self.ratio.pow(i);

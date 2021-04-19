@@ -10,10 +10,10 @@ pub struct GeometricSeries {
     pub current_number: i32,
     pub ratio: i32,
 }
-///Implementing CustomIterator Trait for GeometricSeries Structure
+///Implementing Iterator Trait for GeometricSeries Structure
 impl Iterator for GeometricSeries {
     type Item = Vec<i32>;
-    /// gp_gen function find the geometric series.
+    /// next function find the geometric series.
     ///
     /// #Arguments
     ///
